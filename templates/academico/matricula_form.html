@@ -1,0 +1,42 @@
+{% extends 'academico/index.html' %}
+{% load staticfiles %}
+  {% block titulo %}Registrar Curso{% endblock titulo %}
+  {% block body %}
+
+    <div id="content-wrapper">
+      <div class="container">
+      <form class="form-control-plaintext" method="post" action="" >
+        {% csrf_token %}
+        {{form.as_p}}
+          <!--<div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+              {{ MatriculaForm.fecha_matricula}}
+              <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+            </div>
+            <script>
+              $(function () {
+                $("#datetimepicker1").datetimepicker({
+                  format: 'DD/MM/YYYY HH:mm',
+                });
+              });
+            </script>
+          <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+            {{ fecha_diploma }}
+              <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+            </div>
+            <script>
+              $(function () {
+                $("#datetimepicker2").datetimepicker({
+                  format: 'DD/MM/YYYY HH:mm',
+                });
+              });
+            </script>-->
+        
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <a class="btn btn-dark" href="{% url 'matricula_listar' %}">Cancelar</a>
+      </form>
+      </div>
+      {% endblock body %}
